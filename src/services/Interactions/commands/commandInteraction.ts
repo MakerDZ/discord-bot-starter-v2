@@ -1,6 +1,7 @@
 import { Client, CommandInteraction, Interaction } from "discord.js";
 import FeaturesFlag from "../../../utilities/featureFlag";
 import { join } from 'path';
+import logger from "../../../utilities/logger";
 import actionsLoader from "../../../utilities/actionLoader";
 const actionsFolder = join(__dirname, '/actions');
 
@@ -13,6 +14,6 @@ export default async function commandInteraction(client : Client, interaction : 
     if(actionToExecute && features.hasOwnProperty(actionToExecute.name) && features[actionToExecute.name] === true){
         await actionToExecute.execute(interaction);
     }else{
-        console.log("Command not found.");
+        logger.error("Command not found.");
     }
 }

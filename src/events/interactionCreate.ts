@@ -1,6 +1,7 @@
 import { Interaction, Client } from "discord.js"
 import commandInteraction from "../services/Interactions/commands/commandInteraction";
 import showError from "../components/general/showError";
+import logger from "../utilities/logger"
 
 export default {
     name : "interactionCreate",
@@ -13,7 +14,7 @@ export default {
                 await commandInteraction(client, interaction)
             } catch (error) {
                 interaction.reply(showError(error));
-                console.error(error);
+                logger.error(error);
             }
         }
     }
