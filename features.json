@@ -1,0 +1,5 @@
+{
+    "ping" : true,
+    "embed_message_command" : true,
+    "restart_command" : true
+}
