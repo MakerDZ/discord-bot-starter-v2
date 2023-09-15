@@ -1,7 +1,7 @@
 {
   "name": "discord-template-v2",
   "version": "1.0.0",
-  "description": "Encounter with Burmese Individual in private or anonymous.",
+  "description": "🌿 A simple, beginner-friendly TypeScript Discord bot starter template.",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
@@ -16,6 +16,7 @@
     "dayjs": "^1.11.9",
     "discord.js": "^14.10.2",
     "dotenv": "^16.0.3",
+    "mongoose": "^7.5.1",
     "pino": "^8.15.1",
     "pino-pretty": "^10.2.0"
   },
